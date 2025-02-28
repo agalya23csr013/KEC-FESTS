@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPlus - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            transition: opacity 0.5s ease-in-out;
+            background-color: rgb(228, 224, 224);
+        }
+        .hero-section {
+            background: url('hero1.png') center/cover no-repeat;
+            padding: 200px 0;
+            height: 100vh;
+            text-align: center;
+            transition: background 1s ease-in-out;
+            filter: brightness(70%);
+        }
+        .hero-section h1 {
+            font-size: 4rem; /* Increased */
+            color: rgb(95, 167, 212);
+            text-shadow: 0 0 5px  rgb(95, 167, 212), 0 0 10px rgba(135, 206, 250, 0.8);
+            text-shadow: 
+        -0.25px -0.25px 0 darkblue,  
+        0.25px -0.25px 0 darkblue,  
+        -0.25px 0.25px 0 darkblue,  
+        0.25px 0.25px 0 darkblue,  
+        0 0 15px  rgb(95, 167, 212), 
+        0 0 30px rgba(135, 206, 250, 0.8);
+    -webkit-text-stroke: 2px black;
+        }
+        .hero-section p {
+            font-size: 2rem; /* Increased */
+            color:  rgb(95, 167, 212);
+        }
+        #exploreBtn {
+            background-color:  rgb(95, 167, 212) !important;
+            color: white;
+            font-size: 1.4rem; /* Increased */
+            padding: 14px 28px;
+            border-radius: 5px;
+            border: none;
+            transition: background 0.3s ease-in-out;
+        }
+        #exploreBtn:hover {
+            background-color: deepskyblue;
+        }
+        #events .card {
+            margin: 20px 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .about-section, .contact-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .about-section h1, .contact-section h1 {
+            font-size: 3rem; /* Increased */
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 1.5rem; /* Increased */
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+        }
+        .services-section h2 {
+            font-size: 3rem; /* Increased */
+        }
+        
+        
+        .services-section img {
+    width: 700px;
+    height: 400px;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+        .services-section h4 {
+            font-size: 1.8rem; /* Increased */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(95, 167, 212);">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showHome()">KEC_Fests</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html" onclick="showHome()">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">CC Booking</a></li>
+                            <li><a class="dropdown-item" href="#">Seminar Hall Booking</a></li>
+                            <li><a class="dropdown-item" href="#">Convention Center Booking</a></li>
+                            <li><a class="dropdown-item" href="#">Maharaja Auditorium Booking</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showAbout()">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html" onclick="showContact()">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="hero-section" id="heroSection">
+        <div class="container">
+            <h1><br>Welcome to KEC_Fests</h1>
+            <p>Your gateway to amazing events</p>
+            <button class="btn" id="exploreBtn">Explore Events</button>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="container my-5 services-section">
+        <h2 class="text-center">Our Services</h2>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <a href="#">
+                    <img src="cc.png" alt="CC Booking" class="img-fluid mb-3">
+                    <h4>CC Booking</h4>
+                </a>
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="#">
+                    <img src="Seminar.png" alt="Seminar Hall Booking" class="img-fluid mb-3">
+                    <h4>Seminar Hall Booking</h4>
+                </a>
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="#">
+                    <img src="convention.png" alt="Convention Center Booking" class="img-fluid mb-3">
+                    <h4>Convention Center Booking</h4>
+                </a>
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="#">
+                    <img src="Maharaja.jpg" alt="Maharaja Auditorium Booking" class="img-fluid mb-3">
+                    <h4>Maharaja Auditorium Booking</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("exploreBtn").addEventListener("click", function() {
+            window.location.href = "#services";
+        });
+
+        // Automatic Image Change for Hero Section
+        const images = ['hero1.png', 'hero2.png', 'hero3.png', 'hero4.png']; // Ensure correct extensions
+        let currentIndex = 0;
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById("heroSection").style.backgroundImage = `url(${images[currentIndex]})`;
+        }, 5000);
+
+        function showSection(sectionId) {
+            document.getElementById("heroSection").classList.add("hidden");
+            document.getElementById("services").classList.add("hidden");
+            document.getElementById("aboutSection").classList.add("hidden");
+            document.getElementById("contactSection").classList.add("hidden");
+
+            document.getElementById(sectionId).classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function showAbout() { showSection("aboutSection"); }
+        function showContact() { showSection("contactSection"); }
+        function showHome() {
+            document.getElementById("heroSection").classList.remove("hidden");
+            document.getElementById("services").classList.remove("hidden");
+            document.getElementById("aboutSection").classList.add("hidden");
+            document.getElementById("contactSection").classList.add("hidden");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
